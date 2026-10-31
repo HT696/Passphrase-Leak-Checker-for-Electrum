@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "electrum-passphrase-leak-checker"
+dynamic = ["version"]
+description = "An Electrum seed-extension passphrase leak checker with wallet-password checks and a shared Python client"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test-qt5 = ["PyQt5==5.15.10", "PyQt5-Qt5==5.15.2", "PyQt5-sip==12.13.0"]
+test-qt6 = ["PyQt6==6.6.1", "PyQt6-Qt6==6.6.1", "PyQt6-sip==13.6.0"]
+
+[tool.setuptools.dynamic]
+version = {attr = "passphrase_leak_checker.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["passphrase_leak_checker", "passphrase_leak_checker.*"]
+exclude = ["passphrase_leak_checker.electrum", "passphrase_leak_checker.electrum.*"]

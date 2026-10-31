@@ -1,0 +1,13 @@
+{
+  "name": "electrum_passphrase_leak_checker",
+  "fullname": "Passphrase Leak Checker",
+  "description": "Checks seed-extension passphrases and wallet passwords against known leaked data",
+  "min_electrum_version": "4.8.3",
+  "max_electrum_version": "4.8.3",
+  "available_for": [
+    "qt"
+  ],
+  "author": "HT696",
+  "license": "MIT",
+  "version": "0.1.0"
+}
